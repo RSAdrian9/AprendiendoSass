@@ -1,0 +1,47 @@
+.cv-container {
+  background-color: #FFE1A6;
+  color: #015CD6;
+  width: 800px;
+}
+.cv-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.cv-container p {
+  font-size: 16px;
+}
+.cv-container a {
+  color: #015CD6;
+  text-decoration: none;
+}
+.cv-container a:hover {
+  text-decoration: underline;
+}
+
+.modulos-section {
+  margin-top: 20px;
+}
+.modulos-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.modulos-section .modulos-table {
+  width: 100%;
+}
+.modulos-section .modulos-table th {
+  background-color: #ccc;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+.modulos-section .modulos-table td {
+  padding: 10px;
+}
+.modulos-section .modulos-table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+.modulos-section .modulos-table tr:nth-child(odd) {
+  background-color: #eaeaea;
+}
+
+/*# sourceMappingURL=styles.css.map */

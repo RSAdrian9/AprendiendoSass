@@ -1,0 +1,60 @@
+$color-primario: #FFE1A6;
+$color-secundario: #015CD6;
+$dimension-contenedor: 800px;
+$colores-fondo: #f1f1f1, #eaeaea;
+
+.cv-container {
+  background-color: $color-primario;
+  color: $color-secundario;
+  width: $dimension-contenedor;
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    color: $color-secundario;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.modulos-section {
+  margin-top: 20px;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .modulos-table {
+    width: 100%;
+
+    th {
+      background-color: #ccc;
+      color: #fff;
+      padding: 10px;
+      text-align: left;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    @each $color in $colores-fondo {
+      tr {
+        &:nth-child(odd) {
+          background-color: $color;
+        }
+      }
+    }
+  }
+}
