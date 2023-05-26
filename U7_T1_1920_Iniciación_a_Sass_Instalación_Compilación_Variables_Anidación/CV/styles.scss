@@ -1,0 +1,27 @@
+$color-primario: #FFE1A6;
+$color-secundario: #015CD6;
+$dimension-contenedor: 800px;
+
+.cv-container {
+  background-color: $color-primario;
+  color: $color-secundario;
+  width: $dimension-contenedor;
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    color: $color-secundario;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.cv-container {
+  background-color: #FFE1A6;
+  color: #015CD6;
+  width: 800px;
+}
+.cv-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.cv-container p {
+  font-size: 16px;
+}
+.cv-container a {
+  color: #015CD6;
+  text-decoration: none;
+}
+.cv-container a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */
