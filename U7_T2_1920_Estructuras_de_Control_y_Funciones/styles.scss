@@ -2,59 +2,70 @@ $color-primario: #FFE1A6;
 $color-secundario: #015CD6;
 $dimension-contenedor: 800px;
 $colores-fondo: #f1f1f1, #eaeaea;
+$color-fondo: #f1f1f1;
+$titulos-font-sizes: (28px, 24px, 20px, 18px, 16px, 14px);
+
+$tamaños-fuentes-titulos: (28px, 24px, 20px, 18px, 16px, 14px);
+
+@mixin calcularAnchura($breakpoint, $anchura) {
+  @media (min-width: $breakpoint) {
+    width: $anchura;
+  }
+}
+
+body {
+  background-color: $color-fondo;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
 .cv-container {
-  background-color: $color-primario;
-  color: $color-secundario;
-  width: $dimension-contenedor;
+  max-width: $dimension-contenedor;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  a {
-    color: $color-secundario;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+a {
+  color: $color-primario;
+  text-decoration: none;
 }
 
 .modulos-section {
-  margin-top: 20px;
+  padding: 20px;
+  background-color: $color-fondo;
+}
 
-  h2 {
-    font-size: 20px;
+.modulos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.modulos-table th,
+.modulos-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.modulos-table th {
+  background-color: $color-secundario;
+  color: #fff;
+}
+
+@for $i from 1 through length($tamaños-fuentes-titulos) {
+  h#{$i} {
+    font-size: nth($tamaños-fuentes-titulos, $i);
+    font-weight: bold;
     margin-bottom: 10px;
   }
-
-  .modulos-table {
-    width: 100%;
-
-    th {
-      background-color: #ccc;
-      color: #fff;
-      padding: 10px;
-      text-align: left;
-    }
-
-    td {
-      padding: 10px;
-    }
-
-    @each $color in $colores-fondo {
-      tr {
-        &:nth-child(odd) {
-          background-color: $color;
-        }
-      }
-    }
-  }
 }
+
+.elemento {
+  @include calcularAnchura(768px, 50%);
+  @include calcularAnchura(1024px, 70%);
+}
+
+
